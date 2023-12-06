@@ -57,7 +57,7 @@ ggplot(aes(t,N), data = growth_data) +
   theme_bw()
 ```
 
-![Graph 1: Logistic growth](figures/Logistic_graph.png)
+![Graph 1: Logistic growth](figures/logistic_graph.png)
 
 
 
