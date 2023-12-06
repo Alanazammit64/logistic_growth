@@ -57,7 +57,7 @@ ggplot(aes(t,N), data = growth_data) +
   theme_bw()
 ```
 
-![Graph 1: Logistic growth](Logistic_graph.png)
+![Graph 1: Logistic growth](figures/Logistic_graph.png)
 
 
 
@@ -75,7 +75,7 @@ ggplot(aes(t,N), data = growth_data) +
   ylab("log10(N)") +
   scale_y_continuous(trans='log10')
 ```
-![Graph 2: Exponential growth](exponential_graph.png)
+![Graph 2: Exponential growth](figures/exponential_graph.png)
 
 
 #### fit_linear_model.R
@@ -112,7 +112,7 @@ summary(model2)
 
 The results of the first model are below:
 
-![Model 1](model1.png)
+![Model 1](figures/model1.png)
 
 
 The linearisation of the log of the first part of the model allows us to work out the initial population size (N0) and the growth rate (r). The intercept is log(N0) and the gradient is r. Therefore, from this model, we can derive that N0 is 5000.306 and r is 4.997e-03.
@@ -124,7 +124,7 @@ The linearisation of the log of the first part of the model allows us to work ou
 
 The results of the second model follow:
 
-![Model 2](model2.png)
+![Model 2](figures/model2.png)
 
 
 
@@ -159,14 +159,14 @@ ggplot(aes(t,N), data = growth_data) +
   geom_function(fun=logistic_fun, colour="red") +
   geom_point()
 ```
-![Graph of modelled and actual population growth](model_and_data1.png)
+![Graph of modelled and actual population growth](figures/model_and_data1.png)
 
 Whilst the two lines correlate well, they are not an exact match. My model provides an underestimate of the carrying capacity. To improve the fit between the two lines, the times by which the two models were filtered should be adjusted slightly: to ensure the exact time that the population reached the carrying capacity is used. 
 
 
 I then adjusted the values of t in the two models to find the best fit of the model to the actual population growth. The values of t that resulted in the following graph were t<2000 in the first model, and t>3500 in the second. This suggests that the population had only reached carrying capacity by 3500 minutes. 
 
-![Altered graph of modelled and actual population growth](model_and_data.png)
+![Altered graph of modelled and actual population growth](figures/model_and_data.png)
 
 
 ## Question 2
@@ -217,8 +217,8 @@ The large difference between the two calculations is due to the absence of carry
 
 The code for my graphs can be found in the file named Question3.R in this logistic_growth repository. They are shown below.
 
-![Graph of exponential vs logistic population growth](expvslog.png)
-![Graph of exponential vs logistic population growth when log transformed](expvsloglog.png)
+![Graph of exponential vs logistic population growth](figures/expvslog.png)
+![Graph of exponential vs logistic population growth when log transformed](figures/expvsloglog.png)
 
 
 ### References
